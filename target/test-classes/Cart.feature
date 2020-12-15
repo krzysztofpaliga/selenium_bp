@@ -1,8 +1,9 @@
 Feature: I want to handle allegros cart manipulation
 
+  @cart
   Scenario: Adding some gloves to the cart should increase article count by 1
     Given I open the -allegro home- page
-    When  I press the -consent- button if required
+    When  I press the -consent- button
     And   I search for "maseczka"
     And   I press the -search- button
     And   I click on the first article with the keyword "MASECZKA"
@@ -11,9 +12,10 @@ Feature: I want to handle allegros cart manipulation
     And   I press the -continue shopping- button
     Then  The cart articles counter should be equal to 1
 
+  @cart
   Scenario: Adding some medical gloves, masks and disinfectant fluid to the cart should increase article count by 3
     Given I open the -allegro home- page
-    When  I press the -consent- button if required
+    When  I press the -consent- button
     And   I search for "maseczka"
     And   I press the -search- button
     And   I click on the first article with the keyword "MASECZKA"
@@ -36,9 +38,10 @@ Feature: I want to handle allegros cart manipulation
     And   I press the -continue shopping- button
     Then  The cart articles counter should be equal to 3
 
+  @cart
   Scenario: Adding masks, medical gloves and removing masks should increase article count by 1
     Given I open the -allegro home- page
-    When  I press the -consent- button if required
+    When  I press the -consent- button
     And   I open the -allegro home- page
     And   I search for "maseczka"
     And   I press the -search- button
